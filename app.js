@@ -15,6 +15,7 @@ app.listen(PORT, () => {
         systemPrompt: "### System:\nYou are a voice assistant.\n\n",
       });
       chats.push({name, chat});
+      res.end("done");
     });
     app.get("/:name/:msg", async (req, res) => {
       const {name, msg} = req.params; 
