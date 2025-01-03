@@ -6,7 +6,7 @@ const chats = [];
 app.listen(PORT, () => {
   console.log("listening on " + PORT);
   console.log("loading llm model...");
-  loadLLM("replit-code-v1_5-3b-newbpe-q4_0.gguf").then((llm) => {
+  loadLLM("all-MiniLM-L6-v2-f16.gguf").then((llm) => {
     console.log("loaded");
     app.get("/create/:name", async (req, res) => {
       const {name} = req.params;
